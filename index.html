@@ -424,6 +424,21 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><p>rOpenSci Champion, Cohort 2023–2024</p></li>
 </ul>
 </div></div>
+<aside class="notes">
+<p>Hi everyone, and thank you for being here. In this talk, I’d like to share the story behind ARcenso</p>
+<p>But first, let me introduce myself. I’m Andrea, a sociologist from Argentina. I learned R through the R community, and thanks to that support, I now work as a Population Statistics Analyst at INDEC — our national statistics office.</p>
+<p>It was through this experience that the idea for ARcenso emerged. And I had the chance to turn that idea into a real, useful tool thanks to the rOpenSci Champions program.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="why-is-census-data-important" class="slide level2 arg-title91">
 <h2>Why is census data important?</h2>
@@ -438,6 +453,21 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><p>Forms the foundation for evidence-based decision-making.</p></li>
 </ul>
 </div></div>
+<aside class="notes">
+<p>Before I talk about the package, I want to briefly highlight why census data matters — anywhere in the world.</p>
+<p>These datasets are essential for understanding the population and are the foundation for designing public policies and planning social, economic, and political development.</p>
+<p>We all use census data: researchers, government officials and citizens alike.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="the-2022-census-operation" class="slide level2 arg-title91">
 <h2>The 2022 Census Operation</h2>
@@ -449,6 +479,21 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <p>Argentina conducted its national census in 2022, the country’s largest statistical operation. Starting in 2023, we began publishing the final results, to which I contributed.</p>
 <p>In addition to presenting the data, we had to edit and generate hundreds of Excel tables using R, which was a very manual process.</p>
 </div></div>
+<aside class="notes">
+<p>Argentina conducted its national population census in 2022.</p>
+<p>During 2023 and 2024, official reports with the results were released.</p>
+<p>But beyond those publications, we had a tedious and manual task: preparing hundreds of Excel tables to present specific information for different themes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="an-idea-in-the-middle-of-chaos" class="slide level2 arg-title91">
 <h2>An idea in the middle of chaos</h2>
@@ -459,6 +504,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </div><div class="column" style="width:70%;">
 <p>We had to make many Excel tables. We didn’t know if they were useful or even usable. During that process, I thought <strong>this should be a package in R</strong>, but the idea remained up in the air until rOpenSci Champions appeared and took shape.</p>
 </div></div>
+<aside class="notes">
+<p>We had to put together hundreds of spreadsheets, which was a huge manual task, without knowing if anyone was actually using them. that’s when i thought: this should be a package in r. this idea stayed there until i saw the call for ropensci champions program.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="ropensci-champions-program" class="slide level2 arg-title5">
 <h2>rOpenSci Champions Program</h2>
@@ -469,17 +527,57 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </div><div class="column" style="width:30%;">
 <p><img data-src="images/icon_short_black.svg"></p>
 </div></div>
+<aside class="notes">
+<p>The rOpenSci Champions programme encourages leadership in open science and free software through mentoring and peer support, particularly for individuals from historically underrepresented groups. While financial recognition is included, it was the community that made the biggest difference for me. I almost didn’t apply because I doubted whether I was good enough. Then the R-Ladies remind me that I could do it, that I already had what it took and that the programme would help me to grow even more.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-was-is-my-project" class="slide level2 arg-title5">
 <h2>What was (is) my project?</h2>
 <p><br></p>
 <p><strong>Develop an R data package that makes available the official national population census data of Argentina</strong>, produced by the National Institute of Statistics and Censuses (INDEC), covering the period from 1970 to 2022. The data are homogenized, organized, and ready to use. The package provides open access to these datasets, facilitating their use by the public, researchers, and decision-makers.</p>
+<aside class="notes">
+<p>The original idea behind the project was to create a package that would make available the official data of the national population censuses in Argentina from INDEC from nineteen seventy to twenty twenty-two (1970 to 2022), “ho-MO-dja-naizd / OR-ga-naizd / and RE-di tu yus” homogenized, ordered and ready to use.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="why" class="slide level2 arg-title5">
 <h2>Why?</h2>
 <p><br></p>
 <p>Historical census results for <strong>1970, 1980, 1991, 2001, 2010 and 2022</strong> in Argentina are available in different formats through physical books, PDFs, excel files, and REDATAM outputs, without having a unified system or format that would allow working with the data from these six census periods as a database.</p>
 <p>This fragmentation limits data accessibility, interoperability, and reuse, especially for users working within the R environment.</p>
+<aside class="notes">
+<p>Until now, the data from the six censuses were in different formats: books, PDFs, Excel spreadsheets, and REDATAM. This made it nearly impossible to analyze them together or in a series.</p>
+<p>REDATAM is a software developed by CEPAL (ECLAC) to process and analyze detailed census and survey microdata for small geographic areas. It supports the UN’s mission to improve data accessibility and statistical capacity in Latin America and the Caribbean.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="the-proposal" class="slide level2 arg-title5">
 <h2>The proposal</h2>
@@ -502,6 +600,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </figure>
 </div>
 </div></div>
+<aside class="notes">
+<p>The proposal was to transform those scattered spreadsheets into tidy tables. Where before there was chaos, now there is reproducible structure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="how-it-all-started-key-questions" class="slide level2 arg-title5">
 <h2>How it all started: key questions</h2>
@@ -512,6 +623,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <p><img data-src="images/censos.png" class="fragment" style="width:80.0%" data-top="200" data-left="0"></p>
 <p><img data-src="images/meme.png" class="fragment" style="width:50.0%" data-top="50" data-right="50"></p>
 </div>
+<aside class="notes">
+<p>So, how did we start? Once we got a better sense of the topic, we had to figure out how to organize the data from six censuses into a package—and survive the process!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="conceptual-framework-un-census-data-structure" class="slide level2 smaller arg-title5">
 <h2>Conceptual Framework: UN Census Data Structure</h2>
@@ -545,6 +669,20 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><strong>Jurisdictional level</strong></li>
 </ul>
 </div></div>
+<aside class="notes">
+<p>We organized the information according to the United Nations’ Principles and Recommendations for Population and Housing Censuses.</p>
+<p>This conceptual framework enabled us to structure the data according to units of analysis, as well as classify the variables and geographic disaggregation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="conceptual-framework-fair-principles" class="slide level2 smaller arg-title5">
 <h2>Conceptual Framework: FAIR Principles</h2>
@@ -563,6 +701,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <strong>Reusable →</strong> Standardized codes, open license, reproducible structures.
 </p>
 </div>
+<aside class="notes">
+<p>FAIR principles were employed to ensure the tables’ usability. The data is now findable, accessible, interoperable, and reusable [“The DÉI-ta is NAU FAIN-da-bol, ak-SÉ-sa-bol, in-ter-Ó-pe-ra-bol, and ri-IÚ-sa-bol.”]. This package has a structure, documentation, open licensing, and is easily integrated into any R ecosystem analysis</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="a-thousand-excels-a-thousand-formats" class="slide level2 arg-title5">
 <h2>A Thousand Excels, a Thousand Formats</h2>
@@ -573,6 +724,20 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <p><img data-src="images/meme3.png" class="fragment" style="width:40.0%" data-top="50" data-right="50"></p>
 <p><img data-src="images/meme2.png" class="fragment" style="width:40.0%" data-top="50" data-right="50"></p>
 </div>
+<aside class="notes">
+<p>Along the way, as we reviewed the earliest census years, we discovered that each Excel file had a different design—some more complex than others—which made automating the creation of tables and combining all the census years into one dataset quite challenging.</p>
+<p>At first, I laughed about it, but soon I wanted to cry—one year had 300 files, the next 800, and I still had so much more ahead</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="from-excel-storms-to-a-clear-path" class="slide level2 tabla-chica arg-title5">
 <h2>From Excel Storms to a Clear Path</h2>
@@ -627,6 +792,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </tr>
 </tbody>
 </table>
+<aside class="notes">
+<p>So, in the middle of the crisis, we decided to create a roadmap for data availability. This way, we could work on the package in parallel while having part of the data ready to test it, gradually making more information accessible over time. We are now in Stage 1 of data availability.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="our-technical-approach" class="slide level2 smaller arg-title5">
 <h2>Our technical approach</h2>
@@ -646,11 +824,36 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><p><strong>Version control:</strong> Used Git and GitHub for tracking changes, collaboration, and release management.</p></li>
 </ul>
 </div></div>
+<aside class="notes">
+<p>so we had to design a multi-stage process: scraping, manual selection, cleaning with R, function development, and all versioned on GitHub. The most important thing was to maintain consistency between censuses and make it easy to use with simple functions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section>
 <section id="arcenso-from-idea-to-reality" class="title-slide slide level1 arg-title91 center">
 <h1>ARcenso: From Idea to Reality</h1>
-
+<aside class="notes">
+<p>So, what does ARcenso look like today?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="arcenso" class="slide level2 arg-title91">
 <h2>{ARcenso} 📦</h2>
@@ -665,6 +868,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(arcenso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<aside class="notes">
+<p>You can download the package from github. Currently it has three main functions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="get_census" class="slide level2 arg-title91">
 <h2><code>get_census()</code></h2>
@@ -746,6 +962,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <span id="cb3-72"><a href=""></a><span class="co">#&gt; 59   De 10 y más                    Ocupante gratuito   14550</span></span>
 <span id="cb3-73"><a href=""></a><span class="co">#&gt; 60   De 10 y más                                 Otro    8400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<aside class="notes">
+<p>Get_census brings to the environment all the tables that match the three arguments: year, topic and geographical level.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="check_repository" class="slide level2 arg-title91">
 <h2><code>check_repository()</code></h2>
@@ -764,6 +993,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <span id="cb4-8"><a href=""></a><span class="co">#&gt; 1    Cuadro 18. Total del país. Hogares particulares, personas y cuartos, por régimen de tenencia. Año 1970</span></span>
 <span id="cb4-9"><a href=""></a><span class="co">#&gt; 2 Cuadro 20. Total del país. Hogares particulares, por tamaño del hogar según régimen de tenencia. Año 1970</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<aside class="notes">
+<p>Check_repository list all the tables available in the package at the time that match the three arguments: year, topic and geographical level..0000</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="arcenso-1" class="slide level2 arg-title91">
 <h2><code>ARcenso()</code></h2>
@@ -774,13 +1016,39 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">arcenso</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-<img data-src="images/shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
+<img data-src="images/shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"><aside class="notes">
+<p>A shiny app for dynamically navigate the information.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="documentation" class="slide level2 arg-title91">
 <h2>Documentation</h2>
 <div class="cell">
 <iframe src="https://soyandrea.github.io/arcenso/" width="960" height="600" data-external="1">
 </iframe>
 </div>
+<aside class="notes">
+<p>You can find all the documentation online in the package webpage with examples of use for the functions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="next-steps" class="slide level2 arg-title91">
 <h2>Next steps 💫</h2>
@@ -799,6 +1067,19 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </ul>
 </div></div>
 </div>
+<aside class="notes">
+<p>Looking ahead, our main goals for ARcenso are to improve and expand the package documentation, continue following our phased roadmap, meet rOpenSci peer review standards, increase adoption and visibility, and seek institutional support and funding</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="citizen-origins-community-purpose" class="slide level2 arg-title8">
 <h2>Citizen Origins, Community Purpose</h2>
@@ -809,18 +1090,58 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </div><div class="column" style="width:30%;">
 <p><img data-src="images/arcenso.png"></p>
 </div></div>
+<aside class="notes">
+<p>ARcenso is a citizen-driven initiative born from our direct experience working with census data. It addresses the need for accessible and tidy data for all users, inspired by the collaborative spirit of the R community.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="the-people-behind-arcenso" class="slide level2 arg-title8">
 <h2>The People Behind ARcenso</h2>
 <p>With the support of the rOpenSci Champions Program, cohort 2023–2024, this project is led by Andrea Gómez Vargas, main developer, alongside Emanuel Ciardullo as co-developer and Luis D. Verde as mentor. Tamara Derner designed the project hex logo, and Ariana Bardauil created the Quarto slide theme.</p>
 
-<img data-src="images/team.png" class="r-stretch"></section>
+<img data-src="images/team.png" class="r-stretch"><aside class="notes">
+<p>I led this project, working closely with Emanuel Ciardullo, a statistician and co-author. Together, we formed a strong team to ensure the best statistical experience possible within the package. Luis D. Verde, our mentor, supported us throughout the technical challenges and development, bringing valuable guidance despite our different professional backgrounds.</p>
+<p>On the design side, a friend who is a designer created the project’s hex logo—I had to explain to her the importance of hexagons in the community and that this was an R package. Ariana Bardauil specially crafted the Quarto theme for our presentation. These talented individuals helped give ARcenso its identity, and I’m always grateful for their contributions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="the-r-community-powering-arcenso" class="slide level2 arg-title8">
 <h2>The R Community Powering ARcenso</h2>
 
 <img data-src="images/comunidades.png" class="r-stretch"><blockquote>
 <p>Behind every open-source tool, there’s a community lifting each other up.</p>
 </blockquote>
+<aside class="notes">
+<p>Behind ARcenso is the power of the R community—an open-source ecosystem where collaboration and mutual support bring projects like this to life. ARcenso has been empowered by the community in many ways, but at its core, the community is made up of people who believe in collaborative learning and sharing knowledge.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="a-shared-tool-a-growing-community" class="slide level2 arg-title8">
 <h2>A Shared Tool, A Growing Community</h2>
@@ -830,12 +1151,40 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <blockquote>
 <p>What began as a personal need became a shared resource.</p>
 </blockquote>
+<aside class="notes">
+<p>ARCENSO It has been presented in various places across the country and throughout the continent.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="from-user-to-developer" class="slide level2 arg-title8">
 <h2>From User to Developer</h2>
 
 <img data-src="images/todo.png" class="r-stretch"><p>I started out searching for solutions.</p>
 <p>I ended up building one.</p>
+<aside class="notes">
+<p>And the final, and most powerful message: From User to Developer.</p>
+<p>When I first approached the community, I didn’t know anything about R. It took years to understand how it could help me in my work. And just when I thought I couldn’t create packages, an opportunity came along—and I did it.</p>
+<p>So, if you have a plan for your work or just want to explore and have fun, remember that the community will always be there to support you, to tell you that you can do it, and that you have to believe in yourself.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="thank-u-gracias" class="slide level2 arg-title2">
 <h2>Thank U, Gracias! 😁</h2>
